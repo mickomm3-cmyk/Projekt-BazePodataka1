@@ -63,7 +63,7 @@ CREATE TABLE Rezervacije (
     Kupac_id INTEGER NOT NULL,
     FOREIGN KEY (Kupac_id) REFERENCES Kupac (id)
 );
-
+ --ivor---
 CREATE TABLE Narudzbe (
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
     vrijeme_narudzbe DATETIME NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE Narudzbe (
     Zaposlenik_id INTEGER NOT NULL,
     FOREIGN KEY (Zaposlenik_id) REFERENCES Zaposlenik (id)
 );
-
+ --ivor---
 CREATE TABLE Stavka_Narudzbe (
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
     Narudzbe_id INTEGER NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE Stavka_Narudzbe (
     FOREIGN KEY (Jelo_id) REFERENCES Jelo (id),
     kolicina INTEGER NOT NULL
 );
-
+ --ivor---
 CREATE TABLE Placanje (
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
     Narudzbe_id INTEGER NOT NULL,
@@ -104,7 +104,7 @@ CREATE TABLE Dostava (
     FOREIGN KEY (Narudzbe_id) REFERENCES Narudzbe (id),
     vrijeme_dostave DATETIME NOT NULL
 );
-
+ --ivor---
 CREATE TABLE Racuni_prihodi (
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
     iznos_racuna DECIMAL(6,2) NOT NULL,
